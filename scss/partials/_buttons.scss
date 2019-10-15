@@ -1,0 +1,34 @@
+// BUTTONS
+
+button {
+    font-size: inherit;
+}
+
+button,
+.button {
+    background-color: $color-links;
+    color: #fff;
+    padding: 1em;
+    display: inline-block;
+    margin: .5em;
+    border-radius: 2em;
+    margin-bottom: 2em;
+
+    &:hover {
+        background-color: $color-links-dark;
+        color: #fff;
+    }
+
+    &.alt {
+        color: $color-links;
+        background-color: rgb(255, 255, 255); 
+        border: 1px solid $color-links;
+
+        &:hover {
+            background-color: $color-links-dark;
+            color: #fff; 
+            border-color: $color-links-dark;
+        }
+    }
+
+}

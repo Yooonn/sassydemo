@@ -1,0 +1,73 @@
+// site header
+
+.site-header, .site-footer {
+    background-color: $color-accent;
+    padding: 1em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        font-family: $body-fontfamily;
+        font-size: 1.5em;
+        margin: .5em 0 0 0; //to adjust baseline 
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+// site header
+.site-header {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+
+// site footer
+.site-footer {
+    justify-content: center;
+    margin-top: 6em;
+}
+
+// site navigation
+.site-nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        // display: inline-block;
+    }
+
+    a {
+        display: block;  //to adjust height in the middle
+        padding: 1em;
+    }
+}
+
+section {
+    padding: 4em 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+// hero section
+.hero {
+    background-color: $color-hero-bg;
+    padding: 6em 1em;
+    text-align: center;
+    color: #fff;
+    background-image: url(https://picsum.photos/200/300?grayscale/blur);
+    background-size: cover;
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
