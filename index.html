@@ -27,6 +27,7 @@
       <h1><a href="">SassyBase 2019</a></h1>
     </div>
     <nav class="site-nav">
+      <div class="menu-button">Menu</div>
       <ul>
         <li><a href="#typography">Typography</a></li>
         <li><a href="#layout">Layout</a></li>
@@ -35,10 +36,10 @@
   </header>
 
   <section class="hero">
-    <div class="div">
+    <div class="container">
       <h2>Yoon's Sassy Base</h2>
       <p>This is a simple, single page website, built with SASS</p>
-      <a class="button">Go to Typography</a>
+      <a href="#typography" class="button dark">Go to Typography</a>
     </div>
   </section>
 
@@ -46,14 +47,13 @@
 
     <div class="container">
 
-      <h3 class="sectionhead">Typography</h3>
+      <!-- <h3 class="sectionhead">Typography</h3>
 
       <p class="meta">Typographic Scale</p>
-
+      
       <h1>Heading1</h1>
       <h2>Heading2</h2>
       <h3>Heading3</h3>
-
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. This is something <strong>bold</strong> and this is something <em>italic</em>. This is a <a
           href=#>Link</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -63,7 +63,7 @@
 
       <hr />
 
-      <p class="meta">Type Specimen</p>
+      <p class="meta">Type Specimen</p> -->
 
       <h1 class="mainhead">Headline Title</h1>
       <h2 class="Subhead">This is a subheader</h2>
@@ -86,84 +86,32 @@
 
 
 
-  <section id="layout">
+  <section id="layout" class="split-crossed-left">
 
     <div class="container">
-
-      <h3 class="sectionhead">Layout</h3>
-
-      <small class="meta">Images</small>
-
-      <img src="http://via.placeholder.com/1500x500" alt="Placeholder Image" />
-      <img src="http://place-hold.it/1500x500" alt="Placeholder Image" />
-      <img src="/img/1500x500.gif" alt="Placeholder Image" />
-
-      <hr />
-
-      <small class="meta">Grid</small>
-      <div class="row demo">
-        <div class="column">Column Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, corporis
-          laudantium perferendis cum, excepturi quos, voluptatem reiciendis tempora officia ducimus nam vel voluptate
-          quisquam quibusdam? Fugit veniam illum aliquid, obcaecati a et esse temporibus iste similique voluptates
-          placeat consequuntur nesciunt qui deserunt cum voluptatem, vitae labore quam sint ratione non.</div>
+      <div class="image-block">
+        <img src="https://via.placeholder.com/1500" alt="Placeholder image">
       </div>
-      <div class="row demo">
-        <div class="column one-half">&frac12;</div>
-        <div class="column one-half">&frac12;</div>
+      <div class="text-block">
+        <h4>Center text and image</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sunt error mollitia, magnam cupiditate
+          consequuntur, a blanditiis necessitatibus vero porro aut nemo doloribus saepe nisi!</p>
       </div>
-      <div class="row demo">
-        <div class="column one-third">&frac13;Column</div>
-        <div class="column one-third">&frac13;Column</div>
-        <div class="column one-third">&frac13;Column</div>
-      </div>
-      <div class="row demo">
-        <div class="column one-third">&frac13;Column</div>
-        <div class="column two-thirds">&frac23;Column</div>
-      </div>
-      <div class="row demo">
-        <div class="column one-fourth">&frac14;Column</div>
-        <div class="column one-fourth">&frac14;Column</div>
-        <div class="column one-fourth">&frac14;Column</div>
-        <div class="column one-fourth">&frac14;Column</div>
-      </div>
-
-      <hr>
-
-      <div class="row">
-        <div class="one-half column">
-          <img src="https://via.placeholder.com/1500" alt="Placeholder image">
-        </div>
-        <div class="one-half column">
-          <h4>Text on the right</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sunt error mollitia, magnam cupiditate
-            consequuntur, a blanditiis necessitatibus vero porro aut nemo doloribus saepe nisi!</p>
-        </div>
-      </div>
-
-      <div class="row swap">
-        <div class="one-half column">
-          <img src="https://via.placeholder.com/1500" alt="Placeholder image">
-        </div>
-        <div class="one-half column">
-          <h4>Text on the left</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sunt error mollitia, magnam cupiditate
-            consequuntur, a blanditiis necessitatibus vero porro aut nemo doloribus saepe nisi!</p>
-        </div>
-      </div>
-
-      <div class="row center">
-        <div class="one-half column">
-          <img src="https://via.placeholder.com/1500" alt="Placeholder image">
-        </div>
-        <div class="one-half column">
-          <h4>Center text and image</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sunt error mollitia, magnam cupiditate
-            consequuntur, a blanditiis necessitatibus vero porro aut nemo doloribus saepe nisi!</p>
-        </div>
-      </div>
-
     </div>
+  </section>
 
+  <section class="split-crossed-reversed">
+
+    <div class="container">
+      <div class="image-block">
+        <img src="https://via.placeholder.com/1500" alt="Placeholder image">
+      </div>
+      <div class="text-block">
+        <h4>Center text and image</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sunt error mollitia, magnam cupiditate
+          consequuntur, a blanditiis necessitatibus vero porro aut nemo doloribus saepe nisi!</p>
+      </div>
+    </div>
 
   </section>
 
@@ -183,6 +131,9 @@
   <script>
     var scroll = new SmoothScroll('a[href*="#"]');
   </script>
+
+  <!-- MAIN JS -->
+  <script src="js/script.js"></script>
 
 </body>
 
