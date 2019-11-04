@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-# My Sassy Demo
+
+My Sassy Demo
 
 [View Demo](https://yooonn.github.io/sassydemo/)
 
