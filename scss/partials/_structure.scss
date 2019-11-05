@@ -105,9 +105,38 @@
     top: 2em;
     right: 2em;
     cursor: pointer;
-    background-color: black; 
+    // background-color: black; 
     z-index: 200;
 }
+
+.menu-button.navicon {
+    font-size: 1.75em;
+    line-height: .95;
+    text-align: center;
+    top: 1em;
+    right: 1em;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    // background: pink;
+
+    &:before {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        content: "\2630";
+        transform: rotate(0);
+
+    }
+}
+
+.active .menu-button.navicon:before {
+    content: "\2715";
+    transform: rotate(-90deg);
+    transition: .4s all ease-out;
+}
+
+
 
 section {
     padding: 6em 0;
@@ -186,3 +215,52 @@ h2 {
     }
 }
 
+// SCROLL TRIGGERED ANIMAION
+[data-scroll] {
+    transition: opacity 1s;
+  }
+  [data-scroll="in"] {
+    opacity: 1;
+  }
+  [data-scroll="out"] {
+    opacity: 0;
+  }
+
+// SPLIT-CROSSED LEFT ANIMATION  
+
+  [data-scroll].split-crossed-left .image-block, 
+  [data-scroll].split-crossed-left .text-block {
+    transition: 1s ease-out transform;
+  }
+
+  [data-scroll="in"].split-crossed-left .image-block  {
+    transform: translateX(0);
+  }
+
+  [data-scroll="in"].split-crossed-left .text-block  {
+    transform: translateX(-2em);
+  }
+
+  [data-scroll="out"].split-crossed-left .image-block {
+    transform: translateX(2em);
+  }
+ 
+  [data-scroll="out"].split-crossed-left .text-block  {
+    transform: translateX(-4em);
+  }
+
+
+// SPLIT-CROSSED REVERSED ANIMATION  
+
+  [data-scroll].split-crossed-reversed .image-block, 
+  [data-scroll].split-crossed-reversed .text-block {
+    transition: 1s ease-out transform;
+  }
+
+  [data-scroll="in"].split-crossed-reversed .image-block  {
+    transform: translateX(0);
+  }
+
+  [data-scroll="in"].split-crossed-reversed .text-block  {
+    transform: translateX(2em);
+  }

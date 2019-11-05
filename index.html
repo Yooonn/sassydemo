@@ -24,10 +24,10 @@
   <header class="site-header">
     <div class="site-id">
       <!-- using H1 is super important for seo (Google search)-->
-      <h1><a href="">SassyBase 2019</a></h1>
+      <h1><a href="">SassyBase</a></h1>
     </div>
     <nav class="site-nav">
-      <div class="menu-button">Menu</div>
+      <div class="menu-button navicon">Menu</div>
       <ul>
         <li><a href="#top">Home</a></li>
         <li><a href="#typography">Typography</a></li>
@@ -38,13 +38,13 @@
 
   <section class="hero">
     <div class="container">
-      <h2>Yoon's Sassy Base</h2>
+      <h2>Sassy Base</h2>
       <p>This is a simple, single page website, built with SASS</p>
       <a href="#typography" class="button dark">Go to Typography</a>
     </div>
   </section>
 
-  <section id="typography">
+  <section data-scroll="out" id="typography">
 
     <div class="container">
 
@@ -87,7 +87,7 @@
 
 
 
-  <section id="layout" class="split-crossed-left">
+  <section id="layout" class="split-crossed-left" data-scroll="out">
 
     <div class="container">
       <div class="image-block">
@@ -101,7 +101,7 @@
     </div>
   </section>
 
-  <section class="split-crossed-reversed">
+  <section class="split-crossed-reversed" data-scroll="out">
 
     <div class="container">
       <div class="image-block">
@@ -127,10 +127,22 @@
     </nav>
   </footer>
 
+
+
+
   <!-- SMOOTH SCROLL -->
   <script src="js/smooth-scroll.polyfills.min.js"></script>
   <script>
     var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+
+  <!-- SCROLL OUT SCROLL TRIGGERED ANIMATION -->
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <script>ScrollOut(
+      {
+        threshold: 0.4
+      }
+    );
   </script>
 
   <!-- MAIN JS -->
